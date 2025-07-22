@@ -1,4 +1,4 @@
-/* Шрифт по умолчанию */
+ /* Шрифт по умолчанию */
 @font-face {
   font-family: 'BodyTextLarge';
   src: url('fonts/bodytext-largelight.ttf') format('truetype');
@@ -914,3 +914,27 @@ html, body {
         filter: drop-shadow(0 0 8px rgba(255,255,255,0.6));
     }
 }
+/* === CONTACTS: mobile fix === */
+@media (max-width: 768px) {
+    .contact-wrapper {
+        align-items: flex-start;
+        text-align: left;
+        padding: 0 20px;
+    }
+
+    .contact-methods {
+        align-items: flex-start;
+    }
+
+    .contact-item {
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .contact-item img {
+        align-self: flex-start;
+    }
+}
+
