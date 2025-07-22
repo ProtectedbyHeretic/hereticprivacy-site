@@ -1,4 +1,4 @@
- /* Шрифт по умолчанию */
+/* Шрифт по умолчанию */
 @font-face {
   font-family: 'BodyTextLarge';
   src: url('fonts/bodytext-largelight.ttf') format('truetype');
@@ -336,15 +336,13 @@ nav ul li a {
 
 .contact-wrapper {
     max-width: 600px;
-    margin-left: 0; /* убираем auto */
-    padding-left: 40px;
+    padding-left: 0;
     display: flex;
     flex-direction: column;
     gap: 40px;
     text-align: left;
     align-items: flex-start;
 }
-
 
 .contact-section h2 {
     font-size: 36px;
@@ -939,19 +937,36 @@ html, body {
 }
 /* === MOBILE FIX FOR HEADER NAVIGATION === */
 @media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 16px;
-    margin-top: 40px;
-    padding-left: 20px;
-  }
+    header nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding-left: -40px;
+        margin-top: 50px;
+    }
 
-  nav ul li a {
-    font-size: 16px;
-    letter-spacing: 0.5px;
-  }
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        padding-left: 0;
+        margin: 0;
+    }
+
+    nav ul li {
+        padding-left: 0;
+        margin-left: 0;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+        letter-spacing: 0.5px;
+    }
 }
+  .logo {
+    margin-top: 0;
+  }
 
 
 /* === FIX FOR "IN DEVELOPMENT" CUT TEXT === */
@@ -963,31 +978,12 @@ html, body {
     font-size: 12px;
     opacity: 0.6;
 }
-@media (max-width: 768px) {
+/* Опустить меню вниз на главном экране (desktop) */
+@media (min-width:1025px){
+  header nav {
+    padding-top: 32px;   /* двигай цифру */
+  }
   nav ul {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
-    padding-left: 20px;
-    margin-top: 60px;
-  }
-
-  nav ul li a {
-    font-size: 16px;
-    letter-spacing: 0.5px;
-    white-space: nowrap; /* чтобы ABOUT US не переносился */
-  }
-}
-@media (max-width: 768px) {
-  nav ul {
-    align-items: flex-start;
-    padding-left: 0;
-    margin-left: 20px;
-    margin-top: 80px;
-  }
-
-  nav ul li a {
-    font-size: 16px;
+    margin-top: 8px;     /* если нужно отдельно список опустить */
   }
 }
