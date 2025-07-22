@@ -959,3 +959,7 @@ html, body {
   display: inline-block;
   white-space: nowrap;
 }
+.products-left small {
+    font-size: 12px;
+    opacity: 0.6;
+}
