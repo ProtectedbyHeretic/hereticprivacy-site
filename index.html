@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Heretic Tech Solutions</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div class="wrapper">
+
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#about">ABOUT US</a></li>
+        <li><a href="#products">PRODUCTS</a></li>
+        <li><a href="#contact">SUPPORT</a></li>
+      </ul>
+      <div class="logo">
+        <img src="logo.svg" alt="Heretic Logo" />
+      </div>
+    </nav>
+  </header>
+
+  <!-- 🔷 Главный экран -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Heretic Tech<br>Solutions.</h1>
+      <div class="toggle-wrapper" id="toggle">
+        <div class="toggle-track">
+          <div class="toggle-thumb">Start</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div> <!-- end .wrapper -->
+
+
+<!-- 🔷 ABOUT (НОВЫЙ ВАРИАНТ) -->
+<section id="about" class="about-section">
+  <div class="wrapper">
+    <div class="about-head">
+      <h2>/ ABOUT</h2>
+      <p class="about-lead">We build privacy‑first tools for people who prefer silence over exposure.</p>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-card">
+        <h3>Privacy isn’t a trend</h3>
+        <p>It’s a necessity for individuals, creatives and organizations who value discretion, security and autonomy.</p>
+      </div>
+      <div class="about-card">
+        <h3>No noise</h3>
+        <ul>
+          <li>No headlines.</li>
+          <li>No data collection.</li>
+          <li>No compromises.</li>
+        </ul>
+      </div>
+      <div class="about-card">
+        <h3>For responsible users</h3>
+        <p>Our products are made for people who understand that privacy is both a choice and a responsibility.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- 🔷 Products -->
+<section id="products" class="products-section">
+  <div class="wrapper products-inner">
+
+    <!-- Сначала список продуктов -->
+    <div class="products-left">
+      <h2 class="products-title">/ PRODUCTS</h2>
+
+      <div class="product-item">
+    <h3 class="product-name">
+        <a href="https://t.me/HereticVPN_bot" target="_blank" class="product-link">
+            Heretic VPN <span class="arrow">⟶</span>
+        </a>
+    </h3>
+    <p class="product-desc">
+        Disappear from the noise.<br>
+        Secure tunneling for those who choose privacy.
+    </p>
+</div>
+
+<div class="product-item">
+    <h3 class="product-name">
+        <a href="https://t.me/HereticVPN_bot" target="_blank" class="product-link">
+            Heretic DNS <span class="arrow">⟶</span>
+        </a>
+    </h3>
+    <p class="product-desc">
+        Invisible Infrastructure.<br>
+        Custom DNS to keep your requests clean and private.
+    </p>
+</div>
+
+
+      <div class="product-item">
+       <h3 class="product-name">
+    <span class="nowrap">Heretic Privacy Suite <small>(In Development)</small></span>
+</h3>
+
+        <p class="product-desc">
+          Monitor, control, and reduce your organization’s digital footprint.
+        </p>
+      </div>
+    </div>
+
+    <!-- Потом иконка справа -->
+    <div class="products-icon">
+      <div class="power-wrap">
+        <img src="power.svg" alt="Power">
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- 🔷 Contact Us -->
+<section id="contact" class="contact-section">
+  <div class="wrapper contact-wrapper">
+    <h2>Contact Us</h2>
+
+    <div class="contact-methods">
+      <div class="contact-item">
+        <img src="telegram.svg" alt="Telegram">
+        <a href="https://t.me/hereticvpn_support" target="_blank">@hereticvpn_support</a>
+      </div>
+      <div class="contact-item">
+        <img src="email.svg" alt="Email">
+        <a href="mailto:heretic@heretic.support">heretic@heretic.support</a>
+      </div>
+    </div>
+
+    <div class="contact-text">
+      <p>For all questions, inquiries, or support — just write us.</p>
+      <p>Privacy-first. Always.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- 🔷 Footer -->
+<footer class="footer-section">
+  <div class="wrapper">
+    <p>© 2025 Heretic Tech. All rights reserved.</p>
+    <p>Cybersecurity tools for digital freedom.</p>
+    <p>Privacy-first. Globally trusted.</p>
+  </div>
+</footer>
+
+
+<script>
+  const toggle = document.getElementById('toggle');
+  toggle.addEventListener('click', () => {
+      toggle.classList.toggle('active');
+      setTimeout(() => {
+          window.open('https://t.me/HereticVPN_bot', '_blank');
+      }, 300);
+  });
+</script>
+
+<script>
+const cards = document.querySelectorAll('.about-card');
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      io.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.2 });
+
+cards.forEach(c => io.observe(c));
+</script>
+
+
+</body>
+</html>
