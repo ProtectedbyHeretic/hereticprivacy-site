@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Heretic Tech Solutions</title>
+  <title>Heretic Tech</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -38,30 +38,30 @@
 </div> <!-- end .wrapper -->
 
 
-<!-- 🔷 ABOUT (НОВЫЙ ВАРИАНТ) -->
+<!-- 🔷 ABOUT -->
 <section id="about" class="about-section">
   <div class="wrapper">
     <div class="about-head">
       <h2>/ ABOUT</h2>
-      <p class="about-lead">We build privacy‑first tools for people who prefer silence over exposure.</p>
+      <p class="about-lead">We design network modules for selective access and intelligent routing.</p>
     </div>
 
     <div class="about-grid">
       <div class="about-card">
-        <h3>Privacy isn’t a trend</h3>
-        <p>It’s a necessity for individuals, creatives and organizations who value discretion, security and autonomy.</p>
+        <h3>Stability-first</h3>
+        <p>Our tools support teams and users who rely on uninterrupted connectivity across their infrastructure.</p>
       </div>
       <div class="about-card">
-        <h3>No noise</h3>
+        <h3>No excess</h3>
         <ul>
-          <li>No headlines.</li>
-          <li>No data collection.</li>
-          <li>No compromises.</li>
+          <li>No telemetry.</li>
+          <li>No third-party dependencies.</li>
+          <li>No overhead.</li>
         </ul>
       </div>
       <div class="about-card">
-        <h3>For responsible users</h3>
-        <p>Our products are made for people who understand that privacy is both a choice and a responsibility.</p>
+        <h3>For autonomous environments</h3>
+        <p>Heretic products are optimized for controlled environments that require reliable access layers.</p>
       </div>
     </div>
 
@@ -73,47 +73,45 @@
 <section id="products" class="products-section">
   <div class="wrapper products-inner">
 
-    <!-- Сначала список продуктов -->
+    <!-- Список продуктов -->
     <div class="products-left">
       <h2 class="products-title">/ PRODUCTS</h2>
 
       <div class="product-item">
-    <h3 class="product-name">
-        <a href="https://t.me/HereticVPN_bot" target="_blank" class="product-link">
-            Heretic VPN <span class="arrow">⟶</span>
-        </a>
-    </h3>
-    <p class="product-desc">
-        Disappear from the noise.<br>
-        Secure tunneling for those who choose privacy.
-    </p>
-</div>
-
-<div class="product-item">
-    <h3 class="product-name">
-        <a href="https://t.me/HereticVPN_bot" target="_blank" class="product-link">
-            Heretic DNS <span class="arrow">⟶</span>
-        </a>
-    </h3>
-    <p class="product-desc">
-        Invisible Infrastructure.<br>
-        Custom DNS to keep your requests clean and private.
-    </p>
-</div>
-
+        <h3 class="product-name">
+          <a href="https://t.me/heretictech_bot" target="_blank" class="product-link">
+            Heretic Access <span class="arrow">⟶</span>
+          </a>
+        </h3>
+        <p class="product-desc">
+          Adaptive access platform.<br>
+          For environments that require stable and private routing.
+        </p>
+      </div>
 
       <div class="product-item">
-       <h3 class="product-name">
-    <span class="nowrap">Heretic Privacy Suite <small>(In Development)</small></span>
-</h3>
-
+        <h3 class="product-name">
+          <a href="https://t.me/heretictech_bot" target="_blank" class="product-link">
+            Heretic Relay <span class="arrow">⟶</span>
+          </a>
+        </h3>
         <p class="product-desc">
-          Monitor, control, and reduce your organization’s digital footprint.
+          Request handling module.<br>
+          Enhances connectivity integrity across custom stacks.
+        </p>
+      </div>
+
+      <div class="product-item">
+        <h3 class="product-name">
+          <span class="nowrap">Heretic Infrastructure Suite <small>(Coming soon)</small></span>
+        </h3>
+        <p class="product-desc">
+          Manage your digital structure with layered access policies and adaptive routing.
         </p>
       </div>
     </div>
 
-    <!-- Потом иконка справа -->
+    <!-- Иконка Power -->
     <div class="products-icon">
       <div class="power-wrap">
         <img src="power.svg" alt="Power">
@@ -132,7 +130,7 @@
     <div class="contact-methods">
       <div class="contact-item">
         <img src="telegram.svg" alt="Telegram">
-        <a href="https://t.me/hereticvpn_support" target="_blank">@hereticvpn_support</a>
+        <a href="https://t.me/heretictech_support" target="_blank">@heretictech_support</a>
       </div>
       <div class="contact-item">
         <img src="email.svg" alt="Email">
@@ -142,7 +140,7 @@
 
     <div class="contact-text">
       <p>For all questions, inquiries, or support — just write us.</p>
-      <p>Privacy-first. Always.</p>
+      <p>Minimal by design. Structured by control.</p>
     </div>
   </div>
 </section>
@@ -152,36 +150,34 @@
 <footer class="footer-section">
   <div class="wrapper">
     <p>© 2025 Heretic Tech. All rights reserved.</p>
-    <p>Cybersecurity tools for digital freedom.</p>
-    <p>Privacy-first. Globally trusted.</p>
+    <p>Modular access layers for enterprise-grade control.</p>
+    <p>Built for infrastructure autonomy.</p>
   </div>
 </footer>
 
 
+<!-- 🔷 Scripts -->
 <script>
   const toggle = document.getElementById('toggle');
   toggle.addEventListener('click', () => {
-      toggle.classList.toggle('active');
-      setTimeout(() => {
-          window.open('https://t.me/HereticVPN_bot', '_blank');
-      }, 300);
+    toggle.classList.toggle('active');
+    setTimeout(() => {
+      window.open('https://t.me/heretictech_bot', '_blank');
+    }, 300);
   });
+
+  const cards = document.querySelectorAll('.about-card');
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.2 });
+
+  cards.forEach(c => io.observe(c));
 </script>
-
-<script>
-const cards = document.querySelectorAll('.about-card');
-const io = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      e.target.classList.add('visible');
-      io.unobserve(e.target);
-    }
-  });
-}, { threshold: 0.2 });
-
-cards.forEach(c => io.observe(c));
-</script>
-
 
 </body>
 </html>
